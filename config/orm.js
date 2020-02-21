@@ -1,3 +1,4 @@
+// Import MySQL connection.
 const connection = require('./connection');
 
 // orm object is a set of functions that make SQL queries 
