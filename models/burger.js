@@ -1,22 +1,19 @@
 const orm = require('../config/orm');
 
 const burger = {
-  selectAll: function() {
-    orm.selectAll('burgers', function(res) {
-      console.log(res);
-    });
+  selectAll: async() => {
+    const response = await orm.selectAll('burgers ');
+    return response;
   },
   // The variables cols and vals are arrays.
-  insertOne: function(burgerName) {
-    orm.create('burgers', burgerName, function(res) {
-      console.log(res);
-    });
+  insertOne: async(burgerName) => {
+    const response = await orm.insertOne('burgers', burgerName);
+    return response;
   },
-  updateOne: function(itemId) {
-    orm.update('burgers', itemId, function(res) {
-      console.log(res);
-    });
+  updateOne: async(itemId) => {
+    const response = orm.updateOne('burgers', itemId);
+    return response;
   }
-};
+}
 
 module.exports = burger;
