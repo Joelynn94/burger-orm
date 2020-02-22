@@ -12,8 +12,8 @@ const burger = {
       console.log(res);
     });
   },
-  updateOne: function(itemId) {
-    orm.update('burgers', itemId, function(res) {
+  updateOne: function(itemId, condition) {
+    orm.update('burgers', itemId, condition, function(res) {
       console.log(res);
     });
   }
