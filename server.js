@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("app/public"));
+app.use(express.static("public"));
 
 // Using the controller (router)
 // =============================================================
