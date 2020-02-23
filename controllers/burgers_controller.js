@@ -7,10 +7,10 @@ const orm = require('../config/orm')
 
 router.get('/', function(req, res){
   const select = orm.selectAll()
-  
+
   select
     .then(function(data){ 
-      res.render('index')
+      res.render('index', {burgers: data})
     })
 })
 
