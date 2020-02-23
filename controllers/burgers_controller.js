@@ -5,9 +5,10 @@ const router = express.Router();
 const burger = require('../models/burger');
 
 router.get('/', function(req, res){
-  burger.selectAll(function(){
-    
-  })
+  burger.selectAll()
+    .then(function(){ 
+      res.send('!')
+    })
 })
 
 module.exports = router;

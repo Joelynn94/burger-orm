@@ -2,7 +2,7 @@ const orm = require('../config/orm');
 
 const burger = {
   selectAll: async() => {
-    const response = await orm.selectAll('burgers ');
+    const response = await orm.selectAll('burgers');
     return response;
   },
   // The variables cols and vals are arrays.
@@ -11,7 +11,7 @@ const burger = {
     return response;
   },
   updateOne: async(itemId) => {
-    const response = orm.updateOne('burgers', itemId);
+    const response = await orm.updateOne('burgers', itemId);
     return response;
   }
 }

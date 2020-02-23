@@ -1,5 +1,5 @@
 // Import MySQL connection.
-const connection = require('./connection');
+const connection = require('./connection.js');
 
 // orm object is a set of functions that make SQL queries 
 const orm = {
@@ -10,7 +10,7 @@ const orm = {
     // Creates a new promise to represent an async value. 
     // --starts in pending status  
     return new Promise((resolve, reject) => {
-      connection.query(queryString, [tableName], function(err, result){
+      connection.query(queryString, 'burgers', function(err, result){
         //--reject if failed 
         if(err) {
           return reject(err)
@@ -29,7 +29,7 @@ const orm = {
     // Creates a new promise to represent an async value. 
     // --starts in pending status  
     return new Promise((resolve, reject) => {
-      connection.query(queryString, [burgerName, boolean], function(err, result){
+      connection.query(queryString, [burgerName], function(err, result){
         //--reject if failed 
         if(err) {
           return reject(err)
@@ -43,7 +43,7 @@ const orm = {
   },
   // method to update a table and column based on a new value where the id exists
   updateOne: function(itemId){
-    const queryString = `UPDATE burger SET devoured=true WHERE id=${itemId}`;
+    const queryString = `UPDATE burgers SET devoured=true WHERE id=${itemId}`;
 
     // Creates a new promise to represent an async value. 
     // --starts in pending status 

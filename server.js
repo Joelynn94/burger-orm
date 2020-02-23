@@ -1,5 +1,6 @@
 // Require express
 const express = require('express');
+const routes = require('./controllers/burgers_controller')
 
 // Sets up the Express App
 // =============================================================
@@ -12,3 +13,8 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("app/public"));
+app.use(routes)
+
+app.listen(PORT, function(){
+  console.log('!!!!')
+})
