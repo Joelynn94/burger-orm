@@ -29,39 +29,39 @@
   {{!-- End input and button --}}
 
   {{!-- Burger Lists --}}
-<div class="container">
-  <div class="row mt-5">
-
-    <div class="col-md-6">
-      <h3 class="text-center">Burgers ready to eat</h3>
-      <div class="list-group">
-
-          {{#each burgers}}
-            {{#unless devoured}}
-              <a href="#" class="list-group-item list-group-item-action">
-                {{id}}. {{burger_name}}
-                <button data-id="{{id}}" class='btn btn-warning ml-3'>Eat</button>
-              </a>
-            {{/unless}}
-          {{/each}}
-
-      </div>
-    </div>
+  <div class="container">
+    <div class="row mt-5">
 
       <div class="col-md-6">
-        <h3 class="text-center">Burgers that you ate</h3>
+        <h3 class="text-center">Burgers ready to eat</h3>
         <div class="list-group">
-          
-          {{#each burgers}}
-            {{#if devoured}}
-              <a href="#" class="list-group-item list-group-item-action disabled">
-                {{id}}. {{burger_name}}
-                <i class="fas fa-hamburger"></i>
-              </a>
-            {{/if}}
-          {{/each}}
+
+            {{#each burgers}}
+              {{#unless devoured}}
+                <a href="#" class="list-group-item list-group-item-action">
+                  {{id}}. {{burger_name}}
+                  <button data-id="{{id}}" class='btn btn-warning ml-3'>Eat</button>
+                </a>
+              {{/unless}}
+            {{/each}}
 
         </div>
+      </div>
+
+        <div class="col-md-6">
+          <h3 class="text-center">Burgers you ate</h3>
+          <div class="list-group">
+            
+            {{#each burgers}}
+              {{#if devoured}}
+                <a href="#" class="list-group-item list-group-item-action disabled">
+                  {{id}}. {{burger_name}}
+                  <i class="fas fa-hamburger"></i>
+                </a>
+              {{/if}}
+            {{/each}}
+
+          </div>
+      </div>
     </div>
   </div>
-</div>
