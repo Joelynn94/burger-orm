@@ -27,5 +27,5 @@ app.set('view engine', 'handlebars')
 // Starts the server 
 // =============================================================
 app.listen(PORT, function(){
-  console.log(`Sever is listening on: http://localhost ${PORT}`)
+  console.log(`Sever is listening on: http://localhost:${PORT}`)
 })
