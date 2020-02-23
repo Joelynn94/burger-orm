@@ -1,22 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-  
-  <div class="jumbotron jumbotron-fluid">
+  {{!-- JumboTron --}}
+  <div class="jumbotron background-image text-center">
     <div class="container">
-      <img src="/assets/images/burger-image.jpg" alt="">
-      <h1 class="display-4">Create Your Own Burger</h1>
+      <h1 class="display-4 text-white main-h1">Create Your Own Burger</h1>
     </div>
   </div>
+  {{!-- End JumboTron --}}
 
+{{!-- input and button --}}
+  <div class="container">
+    <div class="row text-center bg-light">
+      <div class="card card-body">
 
-  <script src="/assets/js/index.js"></script>
-</body>
-</html>
+        <form class="form-inline align-items-center">
+          <div class="col-md-8">
+            <div class="input-group md-2">
+              <input type="text" id="submitBurger" class="form-control" placeholder="Enter a burger you want to eat">
+            </div>
+          </div>
+
+          <div class="col">
+            <button type="submit" id="searchBtn" class="btn btn-primary searchBtn">Submit Your Burger</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  {{!-- End input and button --}}
+
+  {{!-- Burger Lists --}}
+<div class="container">
+  <div class="row mt-5">
+
+    <div class="col-md-6">
+      <h3 class="text-center">Burgers ready to eat</h3>
+      <div class="list-group">
+        <p class="list-group-item list-group-item-action">
+          1. Dapibus ac facilisis in          
+          <button data-planid="{{id}}" class='btn btn-warning ml-3'>Eat</button>
+        </p>
+        <a href="#" class="list-group-item list-group-item-action">
+          Morbi leo risus           
+          <button data-planid="{{id}}" class='btn btn-warning ml-3'>Eat</button>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          Porta ac consectetur ac           
+          <button data-planid="{{id}}" class='btn btn-warning ml-3'>Eat</button>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action" tabindex="-1" aria-disabled="true">
+          Vestibulum at eros 
+          <button data-planid="{{id}}" class='btn btn-warning ml-3'>Eat</button>
+        </a>
+      </div>
+    </div>
+
+      <div class="col-md-6">
+        <h3 class="text-center">Burgers that you ate</h3>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action disabled">
+            1. Dapibus ac facilisis in 
+            <i class="fas fa-hamburger"></i>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action disabled">
+            Morbi leo risus 
+            <i class="fas fa-hamburger"></i>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action disabled">
+            Porta ac consectetur ac 
+            <i class="fas fa-hamburger"></i>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">
+            Vestibulum at eros 
+            <i class="fas fa-hamburger"></i>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
