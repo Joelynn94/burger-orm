@@ -47,21 +47,26 @@
 
         </div>
       </div>
+      {{!-- End Burger List --}}
 
-        <div class="col-md-6">
-          <h3 class="text-center">Burgers you ate</h3>
-          <div class="list-group">
-            
-            {{#each burgers}}
-              {{#if devoured}}
-                <a href="#" class="list-group-item list-group-item-action disabled">
-                  {{id}}. {{burger_name}}
-                  <i class="fas fa-hamburger"></i>
-                </a>
-              {{/if}}
-            {{/each}}
+      {{!-- Eaten Burgers --}}
+      <div class="col-md-6">
+        <h3 class="text-center">Burgers you ate</h3>
+        <div class="list-group">
+          
+          {{#each burgers}}
+            {{#if devoured}}
+              <a href="#" class="list-group-item list-group-item-action disabled">
+                {{id}}. {{burger_name}}
+                <i class="fas fa-hamburger"></i>
+              </a>
+            {{/if}}
+          {{/each}}
 
-          </div>
+        </div>
       </div>
+      {{!-- End Eaten Burgers --}}
     </div>
+    {{!-- End Row --}}
   </div>
+  {{!-- End Container --}}
