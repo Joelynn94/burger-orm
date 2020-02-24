@@ -11,15 +11,15 @@
     <div class="row text-center bg-light">
       <div class="card card-body">
 
-        <form class="form-inline align-items-center">
+        <form id="form" class="form-inline align-items-center">
           <div class="col-md-8">
             <div class="input-group md-2">
-              <input type="text" id="submitBurger" class="form-control" placeholder="Enter a burger you want to eat">
+              <input type="text" id="inputBurger" class="form-control" placeholder="Enter a burger you want to eat">
             </div>
           </div>
 
           <div class="col">
-            <button type="submit" id="searchBtn" class="btn btn-primary searchBtn">Submit Your Burger</button>
+            <button type="submit" id="submitBurger" class="btn btn-primary submitBurger">Submit Your Burger</button>
           </div>
         </form>
 
@@ -40,7 +40,7 @@
               {{#unless devoured}}
                 <a href="#" class="list-group-item list-group-item-action">
                   {{id}}. {{burger_name}}
-                  <button data-id="{{id}}" class='btn btn-warning ml-3'>Eat</button>
+                  <button data-id="{{id}}" data-devoured="{{devoured}}" class='btn btn-warning ml-3' id="eatBurger">Eat</button>
                 </a>
               {{/unless}}
             {{/each}}

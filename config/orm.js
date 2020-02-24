@@ -29,7 +29,7 @@ const orm = {
     // Creates a new promise to represent an async value. 
     // --starts in pending status  
     return new Promise((resolve, reject) => {
-      connection.query(queryString, [burgerName], function(err, result){
+      connection.query(queryString, [burgerName, false], function(err, result){
         //--reject if failed 
         if(err) {
           return reject(err)
@@ -42,13 +42,13 @@ const orm = {
 
   },
   // method to update a table and column based on a new value where the id exists
-  updateOne: function(itemId){
-    const queryString = `UPDATE burgers SET devoured=true WHERE id=${itemId}`;
+  updateOne: function(burgerBool, itemId){
+    const queryString = 'UPDATE burgers SET devoured = (?) WHERE id = (?)';
 
     // Creates a new promise to represent an async value. 
     // --starts in pending status 
     return new Promise((resolve, reject) => {
-      connection.query(queryString, [itemId], function(err, result){
+      connection.query(queryString, [burgerBool, itemId], function(err, result){
         //--reject if failed 
         if(err) {
           return reject(err)
