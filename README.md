@@ -24,6 +24,11 @@ This is a burger logger that allows a user to create their own custom burger nam
 ### Technologies Used 
 
 - JavaScript
-- OpenWeather API
+- Express
+- NodeJS
+- MySQL
+- custom ORM
+- HandlebarsJS
+- MVC
 - HTML
 - CSS
